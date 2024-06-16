@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <title>Frontend Mentor | Contact form</title>
+
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <div class="success__message" id="success__message">
+    <div class="success__message-title">
+      <img src="./assets/images/icon-success-check.svg" alt="success-icon" />
+      <p class="small__text">Message Sent!</p>
+    </div>
+
+    <p class="small__text">Thanks for completing the form, We'll be in touch soon.</p>
+  </div>
+
+  <div class="main__container">
+
+    <h1>Contact Us</h1>
+
+    <div class="form__name full__width">
+      <div class="form__name-first full__width">
+        <p class="small__text">First Name <span class="aestrics">*</span></p>
+
+        <input class="text__input-js input__design" type="text" id="name__first" required />
+
+        <p class="error__text">This field is required</p>
+      </div>
+      <div class="form__name-last full__width">
+        <p class="small__text">Last Name <span class="aestrics">*</span></p>
+
+        <input class="text__input-js input__design" type="text" id="name__last" required />
+
+        <p class="error__text">This field is required</p>
+      </div>
+    </div>
+
+    <div class="form__email full__width">
+      <p class="small__text">Email Address <span class="aestrics">*</span></p>
+
+      <input class="text__input-js input__design" type="text" id="email__address" required />
+
+      <p id="email__error" class="error__text">Please enter a valid email address</p>
+    </div>
+
+    <div class="form__query full__width" id="form__query">
+      <div class="small__text">
+        Query Type <span class="aestrics">*</span>
+      </div>
+      <div class="form__query-radio">
+
+        <div class="input__design form__query-radio-component" >
+          <input type="radio" id="radio__general" name="query__radio" required />
+          <label for="radio__general">General Enquiry</label>
+        </div>
+        <div class="input__design form__query-radio-component" >
+          <input type="radio" id="radio__support" name="query__radio" required />
+          <label for="radio__support">Support Request</label>
+        </div>
+
+      </div>
+      <p class="error__text">Please select a query type</p>
+    </div>
+
+    <div class="form__message full__width">
+      <p class="small__text">Message <span class="aestrics">*</span></p>
+
+      <textarea class="text__input-js input__design"></textarea>
+
+      <p class="error__text">This field is required</p>
+    </div>
+
+    <div class="form__checkbox full__width" id="form__checkbox">
+      <div class="form__checkbox-main  full__width">
+        <input type="checkbox" id="checkbox__consent" />
+        <label for="checkbox__consent">
+        I consent to being contacted by the team <span class="aestrics">*</span>
+        </label>
+      </div>
+      <p class="error__text">To submit this form, please consent to being contacted</p>
+    </div>
+
+    <button class="full__width" type="submit" id="form__submit" onclick="checkSuccess()">Submit</button>
+
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    <br />
+    Coded by <a href="#">Shoaib Shuja</a>.
+  </div>
+  
+</body>
+</html>

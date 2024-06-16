@@ -1,0 +1,211 @@
+.success__message {
+ position: absolute;
+  top: 25px;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.2rem;
+
+  background: hsl(169, 82%, 12%);
+
+  display: none;
+}
+
+.success__message-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.success__message-title p {
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #fff;
+}
+
+.success__message p {
+  color: #fff;
+}
+
+.main__container {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+
+  border-radius: 0.8rem;
+  padding: 2.5rem 2rem;
+
+  background: var(--color-white);
+}
+
+.main__container h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: var(--font-family);
+
+  margin-bottom: 5px;
+}
+
+.form__name {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form__query-radio {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__query-radio-component {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form__query-radio-component input,
+.form__query-radio-component label {
+  cursor: pointer;
+  accent-color: var(--color-green-600);
+}
+
+.form__checkbox,
+.form__checkbox input,
+.form__checkbox label {
+  cursor: pointer;
+  accent-color: var(--color-green-600);
+}
+
+.form__checkbox {
+  margin-top: 1.4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding: 1rem 0;
+}
+
+.active.form__message {
+  margin-bottom: 1.8rem;
+}
+
+.form__checkbox-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form__checkbox label {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 100;
+
+  color: var(--color-grey-900);
+}
+
+.form__message {
+  height: 70px;
+}
+
+.form__message textarea {
+  resize: none;
+
+  min-height: 100%;
+
+  line-height: 1rem;
+}
+
+#form__submit {
+  border: none;
+  outline: none;
+
+  font-weight: 500;
+  font-family: var(--font-family);
+  border-radius: 0.4rem;
+  padding: 0.6rem 1rem;
+
+  cursor: pointer;
+
+  color: var(--color-white);
+  background: var(--color-green-600);
+
+  transition: 0.5s ease;
+}
+
+#form__submit:hover {
+  background: hsl(169, 82%, 17%);
+}
+
+#form__submit:active {
+  background: hsl(169, 82%, 10%);
+}
+
+/**** Error Handling Design ****/
+
+.active .error__text {
+  display: block;
+}
+
+/** **/
+
+.attribution {
+  font-size: 11px; text-align: center;
+  position: absolute;
+  bottom: 0;
+  font-family: var(--font-family);
+  font-weight: 300; 
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 1024px) {
+  .main__container {
+    width: 70%;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main__container {
+    width: 90%;
+    min-height: 90vh;
+  }
+
+  .form__name {
+    flex-direction: column;
+  }
+
+  .form__query-radio {
+    flex-direction: column;
+  }
+
+  .form__message {
+    height: 120px;
+  }
+}
